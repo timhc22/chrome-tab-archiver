@@ -26,6 +26,10 @@ A lightweight Chrome extension that lets you archive the current tab into a quar
 
 3. Build the extension:
    ```bash
+   # For development (includes manifest and icon)
+   npm run dev
+
+   # For production build
    npm run build
    ```
 
@@ -33,7 +37,7 @@ A lightweight Chrome extension that lets you archive the current tab into a quar
    - Open Chrome and go to `chrome://extensions/`
    - Enable "Developer mode" in the top right
    - Click "Load unpacked"
-   - Select the `chrome-tab-archiver` directory
+   - Select the `dist` directory (not the root directory)
 
 ### Development
 
@@ -41,6 +45,11 @@ For development with automatic rebuilding:
 ```bash
 npm run watch
 ```
+
+After making changes:
+1. The TypeScript files will be automatically recompiled
+2. Copy the `manifest.json` and `icon.svg` to the `dist` directory
+3. Reload the extension in Chrome
 
 ## Usage
 
@@ -83,14 +92,19 @@ Bookmarks Bar
 
 ### Building
 
-The extension is written in TypeScript and needs to be compiled before use:
+The extension is written in TypeScript and needs to be compiled before use. There are several npm scripts available:
 
 ```bash
+# Clean the dist directory
+npm run clean
+
+# Build for production
 npm run build
-```
 
-For development with automatic rebuilding:
-```bash
+# Build for development (includes manifest and icon)
+npm run dev
+
+# Watch for changes during development
 npm run watch
 ```
 
