@@ -1,5 +1,7 @@
 # Chrome Tab Archiver
 
+Vibe Coded.
+
 A lightweight Chrome extension that lets you archive the current tab into a quarterly-organised bookmark folder with one click (context-menu) or via a keyboard shortcut.
 
 ## Features
