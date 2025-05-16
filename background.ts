@@ -82,7 +82,7 @@ async function archiveCurrentTab() {
     // Show success notification
     chrome.notifications.create({
       type: 'basic',
-      iconUrl: 'icon.svg',
+      iconUrl: 'icons/icon-128.png',
       title: 'Tab Archived',
       message: `Successfully archived "${tab.title}" to ${quarter}/${month}`
     });
@@ -91,7 +91,7 @@ async function archiveCurrentTab() {
     // Show error notification
     chrome.notifications.create({
       type: 'basic',
-      iconUrl: 'icon.svg',
+      iconUrl: 'icons/icon-128.png',
       title: 'Archive Failed',
       message: error instanceof Error ? error.message : 'Failed to archive tab'
     });
