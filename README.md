@@ -69,13 +69,13 @@ You can archive the current tab in two ways:
 The extension creates the following structure in your bookmarks:
 ```
 Bookmarks Bar
-└── Archived
+└── (Archived)
     └── YYYY-Qn (e.g., 2024-Q2)
         └── Month (e.g., May)
             └── [Your archived bookmarks]
 ```
 
-- The "Archived" folder is created if it doesn't exist
+- The "(Archived)" folder is created if it doesn't exist
 - Quarterly folders (e.g., "2024-Q2") are created only for the current quarter
 - Monthly folders are created only for the current month
 - New bookmarks are added at the top of their respective folders

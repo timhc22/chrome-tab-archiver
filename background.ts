@@ -44,10 +44,11 @@ async function findOrCreateFolder(pathParts: string[]): Promise<string> {
         throw new Error(`Cannot create folder for month ${part} - current month is ${currentMonth}`);
       }
 
-      // Create new folder
+      // Create new folder at the top of its parent folder
       const newFolder = await chrome.bookmarks.create({
         parentId,
-        title: part
+        title: part,
+        index: 0
       });
       parentId = newFolder.id;
     }

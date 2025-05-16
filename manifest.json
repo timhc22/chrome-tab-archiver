@@ -1,5 +1,5 @@
 {
-  "name": "chrome-tab-archiver",
+  "name": "ChromeTabArchiver",
   "version": "1.0.0",
   "description": "Archive current tab into a quarterly-organised bookmark folder via context-menu or shortcut",
   "manifest_version": 3,
