@@ -4,9 +4,10 @@
   "description": "Archive current tab into a quarterly-organised bookmark folder via context-menu or shortcut",
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npm run clean && tsc",
+    "copy-files": "cp manifest.json icon.svg dist/",
+    "build": "npm run clean && tsc && npm run copy-files",
     "watch": "tsc -w",
-    "dev": "npm run clean && tsc && cp manifest.json icon.svg dist/"
+    "dev": "npm run clean && tsc && npm run copy-files"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.260",
