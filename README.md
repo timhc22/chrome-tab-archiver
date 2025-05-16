@@ -1,29 +1,103 @@
-# chrome-tab-archiver
+# Chrome Tab Archiver
 
-A lightweight Chrome extension that lets you archive the current browser tab into a quarterly-organised bookmark folder in one click or via a keyboard shortcut. It automatically detects or creates your “Archived” root folder, the current `YYYY-Qn` folder (and optional month subfolder), and saves the new bookmark at the top for instant access.
+A lightweight Chrome extension that lets you archive the current tab into a quarterly-organised bookmark folder with one click (context-menu) or via a keyboard shortcut.
 
 ## Features
 
-- **Context-menu & Shortcut**  
-  Right-click any page or press your chosen hotkey (e.g. Ctrl+Shift+A) to archive the active tab.
+- **Quick Archive**: Archive tabs via context menu or keyboard shortcut (Ctrl+Shift+A)
+- **Organized Structure**: Automatically organizes bookmarks into quarterly and monthly folders
+- **Smart Folder Creation**: Only creates folders for the current quarter and month
+- **Top Placement**: New bookmarks are added at the top of their respective folders
 
-- **Auto-create Folders**  
-  Finds or creates:
-    - `Archived` root folder
-    - Current quarter folder (e.g. `2025-Q2`)
-    - Optional month folder (e.g. `May`)
+## Installation
 
-- **Top-of-Folder Insertion**  
-  New bookmarks are placed at the top for quick retrieval.
+### From Source
 
-- **Customisable**  
-  Configure:
-    - Root folder name
-    - Whether to use month-based subfolders
-    - Keyboard shortcut
-
-## Installation & Development
-
-1. Clone this repo:
+1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/chrome-tab-archiver.git
+   git clone https://github.com/yourusername/chrome-tab-archiver.git
+   cd chrome-tab-archiver
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Build the extension:
+   ```bash
+   npm run build
+   ```
+
+4. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode" in the top right
+   - Click "Load unpacked"
+   - Select the `chrome-tab-archiver` directory
+
+### Development
+
+For development with automatic rebuilding:
+```bash
+npm run watch
+```
+
+## Usage
+
+### Archiving Tabs
+
+You can archive the current tab in two ways:
+
+1. **Context Menu**:
+   - Right-click anywhere on the page
+   - Select "Archive to current quarter"
+
+2. **Keyboard Shortcut**:
+   - Press `Ctrl+Shift+A` (Windows/Linux) or `Cmd+Shift+A` (Mac)
+
+### Folder Structure
+
+The extension creates the following structure in your bookmarks:
+```
+Bookmarks Bar
+└── Archived
+    └── YYYY-Qn (e.g., 2024-Q2)
+        └── Month (e.g., May)
+            └── [Your archived bookmarks]
+```
+
+- The "Archived" folder is created if it doesn't exist
+- Quarterly folders (e.g., "2024-Q2") are created only for the current quarter
+- Monthly folders are created only for the current month
+- New bookmarks are added at the top of their respective folders
+
+## Development
+
+### Project Structure
+
+- `manifest.json` - Extension configuration
+- `background.ts` - Core functionality
+- `icon.svg` - Extension icon
+- `tsconfig.json` - TypeScript configuration
+- `package.json` - Project dependencies
+
+### Building
+
+The extension is written in TypeScript and needs to be compiled before use:
+
+```bash
+npm run build
+```
+
+For development with automatic rebuilding:
+```bash
+npm run watch
+```
+
+## License
+
+MIT License - feel free to use this in your own projects!
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
