@@ -66,7 +66,7 @@ async function archiveCurrentTab() {
     // Compute folder path
     const quarter = computeCurrentQuarter();
     const month = computeCurrentMonth();
-    const folderPath = ['Archived', quarter, month];
+    const folderPath = ['(Archived)', quarter, month];
     
     // Find or create folder structure
     const parentId = await findOrCreateFolder(folderPath);

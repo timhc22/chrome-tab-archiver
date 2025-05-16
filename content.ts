@@ -5,10 +5,4 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault();
     chrome.runtime.sendMessage({ action: 'archive-tab' });
   }
-  
-  // Check for Ctrl+Shift+W (open workstream menu)
-  if (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'w') {
-    event.preventDefault();
-    chrome.runtime.sendMessage({ action: 'open-workstream-menu' });
-  }
 }); 
