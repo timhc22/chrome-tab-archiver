@@ -1,0 +1,13 @@
+{
+  "name": "chrome-tab-archiver",
+  "version": "1.0.0",
+  "description": "Archive current tab into a quarterly-organised bookmark folder via context-menu or shortcut",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.260",
+    "typescript": "^5.3.3"
+  }
+} 

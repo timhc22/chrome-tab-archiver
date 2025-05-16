@@ -1,0 +1,24 @@
+{
+  "name": "chrome-tab-archiver",
+  "version": "1.0.0",
+  "description": "Archive current tab into a quarterly-organised bookmark folder via context-menu or shortcut",
+  "manifest_version": 3,
+  "permissions": [
+    "bookmarks",
+    "tabs",
+    "contextMenus",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "archive-tab": {
+      "suggested_key": { "default": "Ctrl+Shift+A" },
+      "description": "Archive the current tab into the current quarter folder"
+    }
+  },
+  "icons": {
+    "128": "icon.svg"
+  }
+} 
