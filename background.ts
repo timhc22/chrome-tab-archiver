@@ -103,7 +103,7 @@ async function archiveCurrentTab() {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'archive-tab',
-    title: 'Archive to current quarter',
+    title: 'Archive to Current Quarter',
     contexts: ['page']
   });
 });
